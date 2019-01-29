@@ -9,7 +9,7 @@ header{
 	flex-direction: column;
 	justify-content: flex-start;
 	text-align: center;
-	line-height: 1%;
+	line-height: 5%;
 }
 
 a{
@@ -17,21 +17,36 @@ a{
 	text-decoration: none;
 }
 
+#text_gradient{
+	text-transform: uppercase;
+	background: linear-gradient(to bottom, #ff6600 0%, #ffcc00 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 h1, h2{
-	font-family: 'Kaushan Script', cursive;
+	font-family: 'Bungee', cursive;
+	-webkit-text-stroke: 2px;
+	-webkit-text-stroke-color: white;
+
 }
 
 h1{
-	font-size: 130px;
+	font-size: 100px;
 }
 
 h2{
-	font-size: 70px;
+	font-size: 45px;
 }
 
 h3{
 	font-size: 25px;
+	color: red;
 	position: relative;
-	left: 425px;
-	top: -110px;
+	left: 450px;
+	top: -10px;
+}
+
+p{
+	text-align: center
 }
