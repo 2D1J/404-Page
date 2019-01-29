@@ -1,7 +1,9 @@
-html{
+body{
 	background-color: black;
 	color: white;
     font-family: 'Teko', sans-serif;
+    max-height: 100vh;
+    max-width: 100vW;
 }
 
 header{
@@ -10,6 +12,8 @@ header{
 	justify-content: flex-start;
 	text-align: center;
 	line-height: 5%;
+	max-width: inherit;
+	animation: Zeus 5s;
 }
 
 a{
@@ -43,8 +47,9 @@ h3{
 	font-size: 25px;
 	color: white;
 	position: relative;
-	left: 450px;
+	left: 1035px;
 	top: -110px;
+	max-width: 200px;
 }
 
 p{
@@ -55,11 +60,11 @@ p{
 .Marty span{background-color: red;}
 
 .Doc{text-align: right;}
-.Doc span{background-color: skyblue;}
+.Doc span{background-color: blue;}
 
 .Doc span,.Marty span{
-	padding: 3px;
-	margin: 2px;
+	padding: 4px;
+	margin: 3px;
 	border-radius: 5px;
 	width: auto;
 	word-wrap: break-word;
@@ -68,7 +73,7 @@ p{
 
 #dialogue_box{
 	max-width: 600px;
-	max-height: 400px;
+	max-height: 25px;
 	align-content: center;
 	background-color: grey;
 	border-color: white;
@@ -76,5 +81,34 @@ p{
 	border-width: 5px;
 	border-radius: 10px;
 	padding: 15px;
-	margin:;
+	margin: auto;
+	overflow: hidden;
+	position: bottom;
+}
+
+/* Animations */
+@keyframes Message {
+
+	from {
+		transform: translateY(300px);
+	}
+
+	100% {
+		transform: translateY(-225px);
+	}
+}
+
+#animation_box{
+	animation: Message 20s;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes Zeus {
+	from {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
