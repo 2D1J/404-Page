@@ -14,6 +14,7 @@ header{
 	line-height: 5%;
 	max-width: inherit;
 	animation: Zeus 5s;
+	margin-top: 30px;
 }
 
 a{
@@ -83,7 +84,24 @@ p{
 	padding: 15px;
 	margin: auto;
 	overflow: hidden;
-	position: bottom;
+
+}
+
+.logo_chat{
+	max-height: 100px;
+	max-width: auto;
+	border: 3px;
+	border-color: white;
+	border-style: solid;
+	border-radius: 100%;
+}
+
+section{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	margin-left : 230px;
+	margin-right: 230px;
 }
 
 /* Animations */
@@ -111,4 +129,20 @@ p{
 	100% {
 		opacity: 1;
 	}
+}
+
+@keyframes ZeusRotate {
+		from {
+		transform: rotateZ(0deg);
+	}
+	100% {
+		transform: rotateZ(5deg);
+	}
+
+}
+
+header{
+	animation: ZeusRotate 1s;
+	animation-iteration-count: 10;
+	animation-direction: alternate-reverse;
 }
