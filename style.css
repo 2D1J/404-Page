@@ -14,7 +14,7 @@ header{
 	line-height: 5%;
 	max-width: inherit;
 	animation: Zeus 5s;
-	margin-top: 30px;
+	margin-top: 50px;
 	margin:auto;
 }
 
@@ -58,10 +58,8 @@ p{
 	text-align: center;
 }
 
-.Marty{text-align: left;}
 .Marty span{background-color: red;}
 
-.Doc{text-align: right;}
 .Doc span{background-color: blue;}
 
 .Doc span,.Marty span{
@@ -71,19 +69,6 @@ p{
 	width: auto;
 	word-wrap: break-word;
 	line-height: 5px;
-}
-
-#dialogue_box{
-	max-width: 600px;
-	max-height: 25px;
-
-	background-color: grey;
-	border-color: white;
-	border-style: solid;
-	border-width: 3px;
-	border-radius: 10px;
-
-	overflow: hidden;
 }
 
 .logo_chat{
@@ -125,53 +110,70 @@ p{
 
 @keyframes ZeusRotate {
 		from {
-		transform: rotateZ(0deg);
+		transform: rotateZ(-3deg);
+	}
+	25% {
+		transform: rotateZ(3deg);
+	}
+	50% {
+		transform: rotateZ(-3deg);
+	}
+	75% {
+		transform: rotateZ(3deg);
+	}
+	99% {
+		transform: rotateZ(-3deg);
 	}
 	100% {
-		transform: rotateZ(5deg);
+		transform: rotateZ(0deg);
 	}
 
 }
 
+@keyframes blink {
+		from{
+			opacity: 1;
+		}
+		25%{
+			opacity: 0;
+		}
+		50%{
+			opacity: 1;
+		}
+		100%{
+			opacity: 0;
+		}
+}
+
+@keyframes lol {
+		from{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+}
+
+
 header{
 	animation: ZeusRotate 1s;
+	animation-delay: 2s
 	animation-iteration-count: 10;
 	animation-direction: alternate-reverse;
 }
 
-
-#chat{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-content: space-between;
-}
-
-#doc_box{
-	max-width: 400px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: space-between;
-	flex-wrap: nowrap;
-	align-items: center;
-
-}
-
 #doc_logo{
+	height: 50px;
+	margin: 2px;
 }	
 
-.Doc{
-	margin-left: 100px;
-	text-align: center;
-}
-
-.Marty{
-	text-align: center;
+#marty_logo{
+	height: 50px;
+	margin: 2px;
 }
 
 #marty_box{
-	max-width: 400px;
+	width: 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -181,3 +183,84 @@ header{
 	align-items: center;
 	padding: auto;
 }
+
+#chat-box-doc{
+	width: 300px;
+	background-color: blue;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 5px;
+	border: 3px white solid;
+	border-top-left-radius: 40px;
+	border-radius: 60px;
+}
+
+#chat-box-marty{
+	width: 300px;
+	background-color: red;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 5px;
+	border: 3px white solid;
+	border-top-left-radius: 40px;
+	border-radius: 60px;
+}
+
+#marty-message-box{
+	width: 70%;
+	height: auto;
+}
+
+.message{
+	margin: 2px;
+}
+
+#chat_2{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	width: 500px; 
+	margin: auto;
+	align-items: center;
+}
+
+#lien_animation{
+	animation: blink 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate-reverse;
+	animation-delay: 10s;
+}
+
+.anim_message_1{
+	opacity: 0;
+	animation: lol 3s;
+	animation-delay: 2S;
+	animation-fill-mode: forwards;
+}
+
+.anim_message_2{
+	opacity: 0;
+	animation: lol 3s;
+	animation-delay: 4s;
+	animation-fill-mode: forwards;
+}
+
+.anim_message_3{
+	opacity: 0;
+	animation: lol 3s;
+	animation-delay: 6s;
+	animation-fill-mode: forwards;
+}
+
+.anim_message_4{
+	opacity: 0;
+	animation: lol 3s;
+	animation-delay: 8s;
+	animation-fill-mode: forwards;
+}
+
