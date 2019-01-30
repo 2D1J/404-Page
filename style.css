@@ -15,6 +15,7 @@ header{
 	max-width: inherit;
 	animation: Zeus 5s;
 	margin-top: 30px;
+	margin:auto;
 }
 
 a{
@@ -75,16 +76,14 @@ p{
 #dialogue_box{
 	max-width: 600px;
 	max-height: 25px;
-	align-content: center;
+
 	background-color: grey;
 	border-color: white;
 	border-style: solid;
-	border-width: 5px;
+	border-width: 3px;
 	border-radius: 10px;
-	padding: 15px;
-	margin: auto;
-	overflow: hidden;
 
+	overflow: hidden;
 }
 
 .logo_chat{
@@ -94,14 +93,6 @@ p{
 	border-color: white;
 	border-style: solid;
 	border-radius: 100%;
-}
-
-section{
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	margin-left : 230px;
-	margin-right: 230px;
 }
 
 /* Animations */
@@ -119,6 +110,7 @@ section{
 #animation_box{
 	animation: Message 20s;
 	animation-fill-mode: forwards;
+	width: 100%;
 
 }
 
@@ -145,4 +137,47 @@ header{
 	animation: ZeusRotate 1s;
 	animation-iteration-count: 10;
 	animation-direction: alternate-reverse;
+}
+
+
+#chat{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: space-between;
+}
+
+#doc_box{
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: space-between;
+	flex-wrap: nowrap;
+	align-items: center;
+
+}
+
+#doc_logo{
+}	
+
+.Doc{
+	margin-left: 100px;
+	text-align: center;
+}
+
+.Marty{
+	text-align: center;
+}
+
+#marty_box{
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-grow: 0;
+	align-content: space-around;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding: auto;
 }
